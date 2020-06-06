@@ -24,7 +24,8 @@ class Home extends StatelessWidget{
                               decoration: TextDecoration.none,
                               fontSize: 35.0,
                               fontFamily: 'Montserrat',
-                              fontWeight: FontWeight.w300
+                              fontWeight: FontWeight.w300,
+                              color: Colors.white
                           )
                       )),
                   Expanded(
@@ -35,7 +36,8 @@ class Home extends StatelessWidget{
                             decoration: TextDecoration.none,
                             fontSize: 20.0,
                             fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.w300
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white
                         ),
                       ))
                 ],
@@ -50,7 +52,8 @@ class Home extends StatelessWidget{
                               decoration: TextDecoration.none,
                               fontSize: 35.0,
                               fontFamily: 'Montserrat',
-                              fontWeight: FontWeight.w300
+                              fontWeight: FontWeight.w300,
+                              color: Colors.white
                           )
                       )),
                   Expanded(
@@ -61,15 +64,29 @@ class Home extends StatelessWidget{
                             decoration: TextDecoration.none,
                             fontSize: 20.0,
                             fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.w300
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white
                         ),
                       ))
                 ],
-              )
+              ),
+              FlightImageAsset()
             ],
           )
       )
     );
+    throw UnimplementedError();
+  }
+}
+
+class FlightImageAsset extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = new AssetImage('images/flight.png');
+    Image image = new Image(image: assetImage);
+    return Container(child: image);
+
     throw UnimplementedError();
   }
 }
