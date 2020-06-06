@@ -11,7 +11,16 @@ class Home extends StatelessWidget{
 //          width: 200.0,
 //          height: 100.0,
           margin: EdgeInsets.only(left: 45.0, top: 45.0),
-          child: Text('Flight', textDirection: TextDirection.ltr,)
+          child: Text(
+            'Flight',
+            textDirection: TextDirection.ltr,
+            style: TextStyle(
+              decoration: TextDecoration.none,
+              fontSize: 75.0,
+              fontFamily: 'Montserrat',
+              fontWeight: FontWeight.w300
+            ),
+          )
       )
     );
     throw UnimplementedError();
