@@ -12,30 +12,27 @@ void main () {
   ));
 }
 
+List<String> getListElements () {
+
+  var items = List<String>.generate(1000, (index) => 'Item $index');
+  return items;
+
+}
+
 Widget getListView() {
 
-  var listView = ListView(
-    children: <Widget>[
+  var items = getListElements();
 
-      ListTile(
-        leading: Icon(Icons.landscape),
-        title: Text('Landscape'),
-        subtitle: Text('Beautiful view'),
-        trailing: Icon(Icons.wb_sunny),
-        onTap: () {
-          debugPrint('Landscape tapped');
-        },
-      ),
-      ListTile(
-        leading: Icon(Icons.laptop_mac),
-        title: Text('MacBook'),
-      ),
-      ListTile(
-        leading: Icon(Icons.phone_iphone),
-        title: Text('iPhone'),
-      )
-    ],
-  );
+  var listView = ListView.builder(
+      itemBuilder: (context, index) {
+        return ListTile(
+          leading: Icon(Icons.arrow_right),
+          title: Text(items[index]),
+          onTap: () {
+            debugPrint('${items[index]} was tapped');
+          },
+        );
+      });
 
   return listView;
 }
